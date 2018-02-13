@@ -1,5 +1,7 @@
 ﻿{
   "dependencies": {
+    "Microsoft.AppCenter.Analytics": "1.3.0",
+    "Microsoft.AppCenter.Crashes": "1.3.0",
     "Microsoft.Azure.Mobile.Client": "4.0.1",
     "Xamarin.Android.Support.Design": "23.3.0",
     "Xamarin.Android.Support.v4": "23.3.0",

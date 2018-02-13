@@ -8,6 +8,10 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 using Microsoft.WindowsAzure.MobileServices;
 
 using Xamarin.Forms;
@@ -26,8 +30,12 @@ namespace xamarinazuredroid.Droid
 		{
 			base.OnCreate (bundle);
 
-			// Initialize Azure Mobile Apps
-			CurrentPlatform.Init();
+            AppCenter.Start("edeb71f0-2162-46be-86db-39425dd9dcb7",
+                   typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("edeb71f0-2162-46be-86db-39425dd9dcb7", typeof(Analytics), typeof(Crashes));
+
+            // Initialize Azure Mobile Apps
+            CurrentPlatform.Init();
 
 			// Initialize Xamarin Forms
 			Forms.Init (this, bundle);
